@@ -4,7 +4,8 @@ import os
 TARGET_KEYWORDS = ['harga', 'price', 'emas', 'gold', 'saham', 'stock', 'data', 'nilai', 'items', 'list', 'crypto', 'coin', 'btc', 'bitcoin', 'volume', 'marketcap']
 
 # Mode debugging dan Browser
-HEADLESS = False       # Set True untuk production / mode server
+# Otomatis headless di CI (GitHub Actions), headed di desktop lokal
+HEADLESS = True if os.environ.get("GITHUB_ACTIONS") == "true" else False
 TIMEOUT = 60000        # Timeout standar (ms) untuk Playwright
 SAVE_HAR = True        # Simpan file HAR untuk debugging manual
 HAR_DIR = 'har'
