@@ -21,6 +21,12 @@ Cara pakai:
 """
 import os
 import sys
+
+# [CI WORKAROUND] Bypassing interactive prompts when running in GitHub Actions
+if os.environ.get("GITHUB_ACTIONS") == "true":
+    import builtins
+    builtins.input = lambda prompt="": ""
+
 import json
 import time
 import threading
