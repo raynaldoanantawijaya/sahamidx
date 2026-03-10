@@ -136,6 +136,15 @@ def push_file_to_github(source_file_path: str, repo_url: str, target_filename: s
         for py_file in glob.glob(os.path.join(base_dir, "*.py")):
             if not os.path.basename(py_file).startswith("test_") and not os.path.basename(py_file).startswith("."):
                 shutil.copy2(py_file, os.path.join(repo_dir, os.path.basename(py_file)))
+        
+        # Copy essential subdirectories (config, modules, api)
+        essential_dirs = ["config", "modules", "api"]
+        for subdir in essential_dirs:
+            src_dir = os.path.join(base_dir, subdir)
+            dst_dir = os.path.join(repo_dir, subdir)
+            if os.path.isdir(src_dir):
+                shutil.copytree(src_dir, dst_dir, dirs_exist_ok=True,
+                                ignore=shutil.ignore_patterns("__pycache__", "*.pyc", ".DS_Store"))
                 
         # Determine category based on path substring
         category = "all"
