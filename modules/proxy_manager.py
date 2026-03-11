@@ -54,6 +54,12 @@ class ProxyManager:
             "server": proxy_url
         }
 
+    def get_all_playwright_proxies(self):
+        """Mengembalikan list semua dict proxy."""
+        if not settings.USE_PROXY or not self.proxies:
+            return []
+        return [{"server": p} for p in self.proxies]
+
     def _get_current(self):
         """Mengembalikan satu string URL proxy (http://user:pass@ip:port)"""
         # Rotasi berdasarkan setting ROTATE_PROXY_EVERY

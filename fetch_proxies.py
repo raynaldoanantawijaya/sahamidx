@@ -27,13 +27,13 @@ def info(msg): print(f"{Fore.CYAN}ℹ {msg}{Style.RESET_ALL}")
 def warn(msg): print(f"{Fore.YELLOW}⚠ {msg}{Style.RESET_ALL}")
 
 # Parameter Test
-TEST_URL = "http://httpbin.org/ip"
+TEST_URL = "https://httpbin.org/ip"
 TEST_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
     "Accept": "application/json"
 }
 TIMEOUT = 10
-MAX_PROXIES_NEEDED = 10
+MAX_PROXIES_NEEDED = 20
 
 PROXY_SOURCES = [
     "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",

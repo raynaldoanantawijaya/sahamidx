@@ -41,78 +41,96 @@ def fetch_idx_data_via_browser() -> dict:
     from modules.proxy_manager import proxy_manager
 
     with sync_playwright() as p:
-        launch_kwargs = {
+        base_launch_kwargs = {
             "headless": settings.HEADLESS,
             "args": ["--disable-blink-features=AutomationControlled"]
         }
         
-        pw_proxy = proxy_manager.get_proxy_for_playwright()
-        if pw_proxy:
-            launch_kwargs["proxy"] = pw_proxy
-            logger.info(f"Menggunakan Playwright Proxy: {pw_proxy['server']}")
-        
         sys_browser = _get_browser_path()
         if sys_browser:
-            launch_kwargs["executable_path"] = sys_browser
+            base_launch_kwargs["executable_path"] = sys_browser
 
-        try:
-            browser = p.chromium.launch(**launch_kwargs)
-        except Exception:
-            launch_kwargs.pop("executable_path", None)
-            browser = p.chromium.launch(**launch_kwargs)
-            
-        context = browser.new_context(
-            viewport={"width": 1920, "height": 1080},
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        )
-        context.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-        page = context.new_page()
+        pw_proxies = proxy_manager.get_all_playwright_proxies()
+        if not pw_proxies:
+            pw_proxies = [None]
 
-        try:
-            logger.info("Mengakses homepage IDX untuk mendapatkan otentikasi...")
-            page.goto(IDX_BASE_URL, timeout=40000, wait_until="networkidle")
-            page.wait_for_timeout(3000)
+        for idx, pw_proxy in enumerate(pw_proxies):
+            launch_kwargs = base_launch_kwargs.copy()
+            if pw_proxy:
+                launch_kwargs["proxy"] = pw_proxy
+                logger.info(f"[{idx+1}/{len(pw_proxies)}] Mencoba Playwright Proxy: {pw_proxy['server']}")
+            else:
+                logger.info("Mencoba Playwright tanpa proxy...")
 
-            # --- FETCH 1: DAFTAR SAHAM ---
-            logger.info("Mengeksekusi native fetch ke API Daftar Saham...")
-            stocks_meta_res = page.evaluate(f'''async () => {{
-                try {{
-                    const res = await fetch("{API_STOCKS_URL}");
-                    return await res.json();
-                }} catch (e) {{ return {{error: e.toString()}}; }}
-            }}''')
-            if not stocks_meta_res.get("error"):
-                stocks_meta_data = stocks_meta_res.get("data", [])
-                logger.info(f" ✓ {len(stocks_meta_data)} emiten saham berhasil diunduh.")
+            try:
+                browser = p.chromium.launch(**launch_kwargs)
+            except Exception:
+                launch_kwargs.pop("executable_path", None)
+                try:
+                    browser = p.chromium.launch(**launch_kwargs)
+                except Exception as e:
+                    logger.error(f"Gagal meluncurkan browser: {e}")
+                    continue
+                
+            context = browser.new_context(
+                viewport={"width": 1920, "height": 1080},
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            )
+            context.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+            page = context.new_page()
 
-            # --- FETCH 2: RINGKASAN PERDAGANGAN ---
-            logger.info("Mengeksekusi native fetch ke API Ringkasan Perdagangan...")
-            stocks_summary_res = page.evaluate(f'''async () => {{
-                try {{
-                    const res = await fetch("{API_SUMMARY_URL}");
-                    return await res.json();
-                }} catch (e) {{ return {{error: e.toString()}}; }}
-            }}''')
-            if not stocks_summary_res.get("error"):
-                stocks_summary_data = stocks_summary_res.get("data", [])
-                logger.info(f" ✓ {len(stocks_summary_data)} ringkasan saham berhasil diunduh.")
+            try:
+                logger.info("Mengakses homepage IDX untuk mendapatkan otentikasi...")
+                page.goto(IDX_BASE_URL, timeout=40000, wait_until="networkidle")
+                page.wait_for_timeout(3000)
 
-            # --- FETCH 3: RINGKASAN BROKER ---
-            logger.info("Mengeksekusi native fetch ke API Ringkasan Broker...")
-            broker_summary_res = page.evaluate(f'''async () => {{
-                try {{
-                    const res = await fetch("{API_BROKER_URL}");
-                    return await res.json();
-                }} catch (e) {{ return {{error: e.toString()}}; }}
-            }}''')
-            if not broker_summary_res.get("error"):
-                broker_summary_data = broker_summary_res.get("data", [])
-                logger.info(f" ✓ {len(broker_summary_data)} ringkasan broker berhasil diunduh.")
+                # --- FETCH 1: DAFTAR SAHAM ---
+                logger.info("Mengeksekusi native fetch ke API Daftar Saham...")
+                stocks_meta_res = page.evaluate(f'''async () => {{
+                    try {{
+                        const res = await fetch("{API_STOCKS_URL}");
+                        return await res.json();
+                    }} catch (e) {{ return {{error: e.toString()}}; }}
+                }}''')
+                if not stocks_meta_res.get("error"):
+                    stocks_meta_data = stocks_meta_res.get("data", [])
+                    logger.info(f" ✓ {len(stocks_meta_data)} emiten saham berhasil diunduh.")
 
-        except Exception as e:
-            logger.error(f"Terjadi kesalahan saat mengeksekusi fetch dari dalam browser: {e}")
-        finally:
-            browser.close()
+                # --- FETCH 2: RINGKASAN PERDAGANGAN ---
+                logger.info("Mengeksekusi native fetch ke API Ringkasan Perdagangan...")
+                stocks_summary_res = page.evaluate(f'''async () => {{
+                    try {{
+                        const res = await fetch("{API_SUMMARY_URL}");
+                        return await res.json();
+                    }} catch (e) {{ return {{error: e.toString()}}; }}
+                }}''')
+                if not stocks_summary_res.get("error"):
+                    stocks_summary_data = stocks_summary_res.get("data", [])
+                    logger.info(f" ✓ {len(stocks_summary_data)} ringkasan saham berhasil diunduh.")
+
+                # --- FETCH 3: RINGKASAN BROKER ---
+                logger.info("Mengeksekusi native fetch ke API Ringkasan Broker...")
+                broker_summary_res = page.evaluate(f'''async () => {{
+                    try {{
+                        const res = await fetch("{API_BROKER_URL}");
+                        return await res.json();
+                    }} catch (e) {{ return {{error: e.toString()}}; }}
+                }}''')
+                if not broker_summary_res.get("error"):
+                    broker_summary_data = broker_summary_res.get("data", [])
+                    logger.info(f" ✓ {len(broker_summary_data)} ringkasan broker berhasil diunduh.")
+
+            except Exception as e:
+                logger.error(f"Terjadi kesalahan saat mengeksekusi fetch dari dalam browser: {e}")
+            finally:
+                browser.close()
+
+            # If we successfully gathered meta data, we can stop trying other proxies
+            if stocks_meta_data:
+                logger.info("Berhasil mengumpulkan data, menghentikan loop proxy.")
+                break
+            else:
+                logger.warn("Data kosong atau koneksi gagal, mencoba proxy berikutnya if available...")
 
     return {
         "metadata": stocks_meta_data,
