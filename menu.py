@@ -765,56 +765,86 @@ def _scrape_single_url(name: str, url: str, subfolder: str = ""):
         info(f"  → Teknik Khusus: Investing.com __NEXT_DATA__ Extraction...")
         from playwright.sync_api import sync_playwright
         import json as _json
+        from modules.proxy_manager import proxy_manager
+        from config import settings
         
         all_rows = []
         headers = ["Rank", "Nama", "Simbol", "Harga", "Prb (24J)", "Prb (7H)", "Market Cap", "Vol. (24 Jam)"]
         try:
             with sync_playwright() as p:
-                browser = p.chromium.launch(headless=True)
-                context = browser.new_context(
-                    user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-                    extra_http_headers={"Accept-Language": "id-ID,id;q=0.9"}
-                )
-                page = context.new_page()
+                base_launch_args = {"headless": settings.HEADLESS}
                 
-                # Block render-blocking ads/images/css for speed
-                def route_intercept(route):
-                    if route.request.resource_type in ["image", "media", "font", "stylesheet"]:
-                        route.abort()
+                pw_proxies = proxy_manager.get_all_playwright_proxies()
+                if not pw_proxies:
+                    pw_proxies = [None]
+                
+                coins = []
+                for idx, pw_proxy in enumerate(pw_proxies):
+                    launch_args = base_launch_args.copy()
+                    if pw_proxy:
+                        launch_args["proxy"] = pw_proxy
+                        info(f"    [{idx+1}/{len(pw_proxies)}] Mencoba Playwright Proxy: {pw_proxy['server']}")
                     else:
-                        route.continue_()
-                page.route("**/*", route_intercept)
+                        info("    Mencoba Playwright tanpa proxy...")
+                        
+                    try:
+                        browser = p.chromium.launch(**launch_args)
+                        context = browser.new_context(
+                            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+                            extra_http_headers={"Accept-Language": "id-ID,id;q=0.9"}
+                        )
+                        page = context.new_page()
+                        
+                        # Block render-blocking ads/images/css for speed
+                        def route_intercept(route):
+                            if route.request.resource_type in ["image", "media", "font", "stylesheet"]:
+                                route.abort()
+                            else:
+                                route.continue_()
+                        page.route("**/*", route_intercept)
 
-                warn(f"    Mengambil data dari __NEXT_DATA__...")
-                try:
-                    page.goto(url, wait_until="domcontentloaded", timeout=30000)
-                except Exception:
-                    pass
-                
-                page.wait_for_timeout(3000)
-                
-                # Extract structured crypto data from __NEXT_DATA__ JSON
-                coins = page.evaluate('''() => {
-                    let el = document.getElementById('__NEXT_DATA__');
-                    if (!el) return [];
-                    try {
-                        let d = JSON.parse(el.textContent);
-                        let coins = d.props?.pageProps?.state?.cryptoStore?.cryptoCoinsCollection?._collection || [];
-                        return coins.map(c => ({
-                            rank: c.rank,
-                            name: c.name,
-                            symbol: c.symbol,
-                            price: c.last,
-                            change24h: c.changeOneDay,
-                            change7d: c.changeSevenDays,
-                            marketCap: c.marketCap,
-                            volume24h: c.volumeOneDay
-                        }));
-                    } catch(e) { return []; }
-                }''')
-                
-                browser.close()
-                
+                        warn(f"    Mengambil data dari __NEXT_DATA__...")
+                        try:
+                            # Let it throw on generic error but continue logic
+                            page.goto(url, wait_until="domcontentloaded", timeout=40000)
+                        except Exception:
+                            pass
+                        
+                        page.wait_for_timeout(3000)
+                        
+                        # Extract structured crypto data from __NEXT_DATA__ JSON
+                        coins = page.evaluate('''() => {
+                            let el = document.getElementById('__NEXT_DATA__');
+                            if (!el) return [];
+                            try {
+                                let d = JSON.parse(el.textContent);
+                                let coins = d.props?.pageProps?.state?.cryptoStore?.cryptoCoinsCollection?._collection || [];
+                                return coins.map(c => ({
+                                    rank: c.rank,
+                                    name: c.name,
+                                    symbol: c.symbol,
+                                    price: c.last,
+                                    change24h: c.changeOneDay,
+                                    change7d: c.changeSevenDays,
+                                    marketCap: c.marketCap,
+                                    volume24h: c.volumeOneDay
+                                }));
+                            } catch (e) { return []; }
+                        }''')
+                        
+                        if coins and len(coins) > 0:
+                            browser.close()
+                            break # escape proxy loop
+                        else:
+                            warn("    Data kosong/diblokir oleh Cloudflare. Mencoba proxy selanjutnya...")
+                    except Exception as e:
+                        logger.error(f"    Error saat eksekusi browser proxy: {e}")
+                    finally:
+                        try:
+                            browser.close()
+                        except Exception:
+                            pass
+                            
                 if coins:
                     def fmt_price(v):
                         try:
@@ -845,7 +875,7 @@ def _scrape_single_url(name: str, url: str, subfolder: str = ""):
                             "Vol. (24 Jam)": fmt_cap(coin.get("volume24h"))
                         })
                     ok(f"      + {len(all_rows)} koin ditemukan")
-                
+
             if all_rows:
                 result = {
                     "technique": "investing_nextdata",

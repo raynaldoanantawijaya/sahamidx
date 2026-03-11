@@ -48,106 +48,138 @@ def scrape_with_playwright():
     all_data = {}
     total_pairs = 0
 
+    from modules.proxy_manager import proxy_manager
+
     with sync_playwright() as p:
         browser_path = get_browser_path()
-        launch_args = {"headless": True}
+        base_launch_args = {"headless": True}
         if browser_path:
-            launch_args["executable_path"] = browser_path
-            logger.info(f"Menggunakan browser sistem: {browser_path}")
+            base_launch_args["executable_path"] = browser_path
 
-        try:
-            browser = p.chromium.launch(**launch_args)
-        except Exception as e:
-            logger.warning(f"Gagal launch browser: {e}. Mencoba tanpa executable_path...")
-            browser = p.chromium.launch(headless=True)
-
-        context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-            locale="id-ID",
-            viewport={"width": 1280, "height": 900}
-        )
-        page = context.new_page()
-        page.set_extra_http_headers({
-            "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8",
-            "Referer": "https://id.tradingeconomics.com/"
-        })
-
-        logger.info(f"Membuka halaman: {URL}")
-        try:
-            page.goto(URL, wait_until="domcontentloaded", timeout=PAGE_LOAD_TIMEOUT)
-        except PWTimeout:
-            logger.warning("Timeout pada domcontentloaded, mencoba lanjut...")
-
-        # Tunggu tabel utama muncul
-        try:
-            page.wait_for_selector("table", timeout=15000)
-            logger.info("Tabel ditemukan di DOM!")
-        except PWTimeout:
-            logger.warning("Tabel tidak ditemukan setelah 15 detik. Halaman mungkin memerlukan autentikasi.")
-
-        # Ekstra tunggu agar semua baris ter-render
-        page.wait_for_timeout(3000)
-
-        # Scroll ke bawah untuk memastikan lazy-load ter-trigger
-        page.evaluate("window.scrollTo(0, document.body.scrollHeight / 2)")
-        page.wait_for_timeout(1500)
-        page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-        page.wait_for_timeout(1500)
-
-        # Ekstrak semua tabel via JavaScript di dalam page context
-        tables_data = page.evaluate("""
-        () => {
-            const results = [];
-            const tables = document.querySelectorAll('table');
+        pw_proxies = proxy_manager.get_all_playwright_proxies()
+        if not pw_proxies:
+            pw_proxies = [None]
             
-            tables.forEach((table, tableIdx) => {
-                // Cari heading terdekat sebelum tabel
-                let groupName = 'Grup ' + (tableIdx + 1);
-                let prev = table.previousElementSibling;
-                while (prev) {
-                    const tag = prev.tagName.toLowerCase();
-                    if (['h1','h2','h3','h4','h5'].includes(tag)) {
-                        groupName = prev.innerText.trim();
-                        break;
-                    }
-                    if (prev.tagName === 'TABLE') break;
-                    prev = prev.previousElementSibling;
-                }
+        tables_data = []
+
+        for idx, pw_proxy in enumerate(pw_proxies):
+            launch_args = base_launch_args.copy()
+            if pw_proxy:
+                launch_args["proxy"] = pw_proxy
+                logger.info(f"[{idx+1}/{len(pw_proxies)}] Mencoba Playwright Proxy: {pw_proxy['server']}")
+            else:
+                logger.info("Mencoba Playwright tanpa proxy...")
+
+            try:
+                browser = p.chromium.launch(**launch_args)
+            except Exception as e:
+                logger.warning(f"Gagal launch browser: {e}. Mencoba tanpa executable_path...")
+                launch_args.pop("executable_path", None)
+                try:
+                    browser = p.chromium.launch(**launch_args)
+                except Exception as e:
+                    logger.error(f"Gagal meluncurkan browser sepenuhnya: {e}")
+                    continue
+
+            context = browser.new_context(
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+                locale="id-ID",
+                viewport={"width": 1280, "height": 900}
+            )
+            page = context.new_page()
+            page.set_extra_http_headers({
+                "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8",
+                "Referer": "https://id.tradingeconomics.com/"
+            })
+
+            logger.info(f"Membuka halaman: {URL}")
+            try:
+                page.goto(URL, wait_until="domcontentloaded", timeout=PAGE_LOAD_TIMEOUT)
+            except PWTimeout:
+                logger.warning("Timeout pada domcontentloaded, mencoba lanjut...")
+            except Exception as e:
+                logger.warning(f"Error navigasi jaringan: {e}")
+
+            # Tunggu tabel utama muncul
+            try:
+                page.wait_for_selector("table", timeout=15000)
+                logger.info("Tabel ditemukan di DOM!")
+            except Exception:
+                logger.warning("Tabel tidak ditemukan setelah 15 detik. Kemungkinan diblokir. Mencoba proxy selanjutnya...")
+                try: browser.close()
+                except: pass
+                continue
+
+            # Ekstra tunggu agar semua baris ter-render
+            page.wait_for_timeout(3000)
+
+            # Scroll ke bawah untuk memastikan lazy-load ter-trigger
+            page.evaluate("window.scrollTo(0, document.body.scrollHeight / 2)")
+            page.wait_for_timeout(1500)
+            page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            page.wait_for_timeout(1500)
+
+            # Ekstrak semua tabel via JavaScript di dalam page context
+            tables_data = page.evaluate("""
+            () => {
+                const results = [];
+                const tables = document.querySelectorAll('table');
                 
-                // Ambil headers
-                const headerRow = table.querySelector('tr');
-                if (!headerRow) return;
-                const headers = Array.from(headerRow.querySelectorAll('th, td'))
-                    .map(th => th.innerText.trim());
-                if (headers.length < 3) return;
-                
-                // Ambil semua baris data
-                const rows = [];
-                const dataRows = Array.from(table.querySelectorAll('tr')).slice(1);
-                
-                dataRows.forEach(row => {
-                    const cells = Array.from(row.querySelectorAll('td, th'));
-                    if (cells.length < 3) return;
-                    
-                    const rowObj = {};
-                    cells.forEach((cell, i) => {
-                        if (i < headers.length) {
-                            rowObj[headers[i]] = cell.innerText.trim();
+                tables.forEach((table, tableIdx) => {
+                    // Cari heading terdekat sebelum tabel
+                    let groupName = 'Grup ' + (tableIdx + 1);
+                    let prev = table.previousElementSibling;
+                    while (prev) {
+                        const tag = prev.tagName.toLowerCase();
+                        if (['h1','h2','h3','h4','h5'].includes(tag)) {
+                            groupName = prev.innerText.trim();
+                            break;
                         }
+                        if (prev.tagName === 'TABLE') break;
+                        prev = prev.previousElementSibling;
+                    }
+                    
+                    // Ambil headers
+                    const headerRow = table.querySelector('tr');
+                    if (!headerRow) return;
+                    const headers = Array.from(headerRow.querySelectorAll('th, td'))
+                        .map(th => th.innerText.trim());
+                    if (headers.length < 3) return;
+                    
+                    // Ambil semua baris data
+                    const rows = [];
+                    const dataRows = Array.from(table.querySelectorAll('tr')).slice(1);
+                    
+                    dataRows.forEach(row => {
+                        const cells = Array.from(row.querySelectorAll('td, th'));
+                        if (cells.length < 3) return;
+                        
+                        const rowObj = {};
+                        cells.forEach((cell, i) => {
+                            if (i < headers.length) {
+                                rowObj[headers[i]] = cell.innerText.trim();
+                            }
+                        });
+                        if (Object.keys(rowObj).length > 0) rows.push(rowObj);
                     });
-                    if (Object.keys(rowObj).length > 0) rows.push(rowObj);
+                    
+                    if (rows.length > 0) {
+                        results.push({ group: groupName, headers, rows });
+                    }
                 });
                 
-                if (rows.length > 0) {
-                    results.push({ group: groupName, headers, rows });
-                }
-            });
+                return results;
+            }
+            """)
             
-            return results;
-        }
-        """)
-
-        logger.info(f"Berhasil mengekstrak {len(tables_data)} tabel dari DOM")
+            if tables_data:
+                logger.info(f"Berhasil mengekstrak {len(tables_data)} tabel dari DOM. Menghentikan pencarian proxy.")
+                try: browser.close()
+                except: pass
+                break
+            else:
+                try: browser.close()
+                except: pass
 
         # Proses setiap tabel
         NUMERIC_COLS = {"Harga", "Hari", "%", "Mingguan", "Bulanan", "YTD", "YoY",

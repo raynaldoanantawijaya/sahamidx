@@ -161,7 +161,7 @@ def push_file_to_github(source_file_path: str, repo_url: str, target_filename: s
         yml_path = os.path.join(workflows_dir, "auto_scrape.yml")
         
         fetch_proxies_step = ""
-        if category == "saham":
+        if category in ["saham", "crypto", "forex"]:
             fetch_proxies_step = """
       - name: Hunt Fresh Working Proxies
         run: python fetch_proxies.py
@@ -179,6 +179,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      TZ: "Asia/Jakarta"
       
     steps:
       - name: Checkout repository
