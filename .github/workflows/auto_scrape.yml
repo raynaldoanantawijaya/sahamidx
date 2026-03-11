@@ -26,7 +26,10 @@ jobs:
         
       - name: Install Playwright
         run: playwright install chromium --with-deps
-        
+
+      - name: Hunt Fresh Working Proxies
+        run: python fetch_proxies.py
+
       - name: Run Scraper
         run: python menu.py --saham
         

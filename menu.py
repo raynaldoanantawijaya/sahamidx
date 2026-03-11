@@ -1371,6 +1371,8 @@ def run_scrape_saham():
             info(f"Total Broker: {res['metadata']['total_brokers']}")
         else:
             err("Gagal scrape data IDX.")
+            if os.environ.get("GITHUB_ACTIONS") == "true":
+                sys.exit(1)
             
     elif idx == 1:
         # Pluang Scraping

@@ -160,6 +160,13 @@ def push_file_to_github(source_file_path: str, repo_url: str, target_filename: s
         os.makedirs(workflows_dir, exist_ok=True)
         yml_path = os.path.join(workflows_dir, "auto_scrape.yml")
         
+        fetch_proxies_step = ""
+        if category == "saham":
+            fetch_proxies_step = """
+      - name: Hunt Fresh Working Proxies
+        run: python fetch_proxies.py
+"""
+        
         yml_content = f"""name: Standalone Scraper ({category})
 
 on:
@@ -188,7 +195,7 @@ jobs:
         
       - name: Install Playwright
         run: playwright install chromium --with-deps
-        
+{fetch_proxies_step}
       - name: Run Scraper
         run: python menu.py --{category}
         

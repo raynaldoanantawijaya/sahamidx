@@ -38,11 +38,18 @@ def fetch_idx_data_via_browser() -> dict:
     stocks_summary_data = []
     broker_summary_data = []
 
+    from modules.proxy_manager import proxy_manager
+
     with sync_playwright() as p:
         launch_kwargs = {
             "headless": settings.HEADLESS,
             "args": ["--disable-blink-features=AutomationControlled"]
         }
+        
+        pw_proxy = proxy_manager.get_proxy_for_playwright()
+        if pw_proxy:
+            launch_kwargs["proxy"] = pw_proxy
+            logger.info(f"Menggunakan Playwright Proxy: {pw_proxy['server']}")
         
         sys_browser = _get_browser_path()
         if sys_browser:
