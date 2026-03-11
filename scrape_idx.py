@@ -180,10 +180,13 @@ def scrape_idx_all() -> dict:
                 "Frekuensi": s.get("Frequency", 0)
             })
 
+    from datetime import datetime
+    
     output_data = {
         "metadata": {
             "scraper_name": "IDX Native Browser API Scraper",
             "timestamp": int(time.time()),
+            "scrape_date": datetime.now().isoformat(),
             "total_stocks": len(combined_stocks),
             "total_brokers": len(raw["brokers"])
         },
