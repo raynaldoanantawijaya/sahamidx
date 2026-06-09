@@ -1,8 +1,8 @@
 {
   "metadata": {
     "scraper_name": "IDX Native Browser API Scraper",
-    "timestamp": 1781002397,
-    "scrape_date": "2026-06-09T17:53:17.712018",
+    "timestamp": 1781014674,
+    "scrape_date": "2026-06-09T21:17:54.062435",
     "total_stocks": 959,
     "total_brokers": 88
   },
@@ -15345,7 +15345,7 @@
   "brokers": [
     {
       "No": 1,
-      "IDBrokerSummary": 956931,
+      "IDBrokerSummary": 957020,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "AD",
       "FirmName": "Sukadana Prima Sekuritas",
@@ -15355,7 +15355,7 @@
     },
     {
       "No": 2,
-      "IDBrokerSummary": 956932,
+      "IDBrokerSummary": 957021,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "AF",
       "FirmName": "Harita Kencana Sekuritas",
@@ -15365,7 +15365,7 @@
     },
     {
       "No": 3,
-      "IDBrokerSummary": 956933,
+      "IDBrokerSummary": 957022,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "AG",
       "FirmName": "Kiwoom Sekuritas Indonesia",
@@ -15375,7 +15375,7 @@
     },
     {
       "No": 4,
-      "IDBrokerSummary": 956934,
+      "IDBrokerSummary": 957023,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "AH",
       "FirmName": "Shinhan Sekuritas Indonesia",
@@ -15385,7 +15385,7 @@
     },
     {
       "No": 5,
-      "IDBrokerSummary": 956935,
+      "IDBrokerSummary": 957024,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "AI",
       "FirmName": "Kay Hian Sekuritas",
@@ -15395,7 +15395,7 @@
     },
     {
       "No": 6,
-      "IDBrokerSummary": 956936,
+      "IDBrokerSummary": 957025,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "AK",
       "FirmName": "UBS Sekuritas Indonesia",
@@ -15405,7 +15405,7 @@
     },
     {
       "No": 7,
-      "IDBrokerSummary": 956937,
+      "IDBrokerSummary": 957026,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "AO",
       "FirmName": "ERDIKHA ELIT SEKURITAS",
@@ -15415,7 +15415,7 @@
     },
     {
       "No": 8,
-      "IDBrokerSummary": 956938,
+      "IDBrokerSummary": 957027,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "AP",
       "FirmName": "Pacific Sekuritas Indonesia",
@@ -15425,7 +15425,7 @@
     },
     {
       "No": 9,
-      "IDBrokerSummary": 956939,
+      "IDBrokerSummary": 957028,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "AR",
       "FirmName": "Binaartha Sekuritas",
@@ -15435,7 +15435,7 @@
     },
     {
       "No": 10,
-      "IDBrokerSummary": 956940,
+      "IDBrokerSummary": 957029,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "AT",
       "FirmName": "Phintraco Sekuritas",
@@ -15445,7 +15445,7 @@
     },
     {
       "No": 11,
-      "IDBrokerSummary": 956941,
+      "IDBrokerSummary": 957030,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "AZ",
       "FirmName": "Sucor Sekuritas",
@@ -15455,7 +15455,7 @@
     },
     {
       "No": 12,
-      "IDBrokerSummary": 956942,
+      "IDBrokerSummary": 957031,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "BB",
       "FirmName": "Verdhana Sekuritas Indonesia",
@@ -15465,7 +15465,7 @@
     },
     {
       "No": 13,
-      "IDBrokerSummary": 956943,
+      "IDBrokerSummary": 957032,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "BF",
       "FirmName": "Inti Fikasa Sekuritas",
@@ -15475,7 +15475,7 @@
     },
     {
       "No": 14,
-      "IDBrokerSummary": 956944,
+      "IDBrokerSummary": 957033,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "BK",
       "FirmName": "J.P. Morgan Sekuritas Indonesia",
@@ -15485,7 +15485,7 @@
     },
     {
       "No": 15,
-      "IDBrokerSummary": 956945,
+      "IDBrokerSummary": 957034,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "BQ",
       "FirmName": "Korea Investment and Sekuritas Indonesia",
@@ -15495,7 +15495,7 @@
     },
     {
       "No": 16,
-      "IDBrokerSummary": 956946,
+      "IDBrokerSummary": 957035,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "BR",
       "FirmName": "Trust Sekuritas",
@@ -15505,7 +15505,7 @@
     },
     {
       "No": 17,
-      "IDBrokerSummary": 956947,
+      "IDBrokerSummary": 957036,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "BS",
       "FirmName": "Equity Sekuritas Indonesia",
@@ -15515,7 +15515,7 @@
     },
     {
       "No": 18,
-      "IDBrokerSummary": 956948,
+      "IDBrokerSummary": 957037,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "CC",
       "FirmName": "MANDIRI SEKURITAS",
@@ -15525,7 +15525,7 @@
     },
     {
       "No": 19,
-      "IDBrokerSummary": 956949,
+      "IDBrokerSummary": 957038,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "CD",
       "FirmName": "Mega Capital Sekuritas",
@@ -15535,7 +15535,7 @@
     },
     {
       "No": 20,
-      "IDBrokerSummary": 956950,
+      "IDBrokerSummary": 957039,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "CP",
       "FirmName": "KB Valbury Sekuritas",
@@ -15545,7 +15545,7 @@
     },
     {
       "No": 21,
-      "IDBrokerSummary": 956951,
+      "IDBrokerSummary": 957040,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "DD",
       "FirmName": "Makindo Sekuritas",
@@ -15555,7 +15555,7 @@
     },
     {
       "No": 22,
-      "IDBrokerSummary": 956952,
+      "IDBrokerSummary": 957041,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "DH",
       "FirmName": "SINARMAS SEKURITAS",
@@ -15565,7 +15565,7 @@
     },
     {
       "No": 23,
-      "IDBrokerSummary": 956953,
+      "IDBrokerSummary": 957042,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "DP",
       "FirmName": "DBS Vickers Sekuritas Indonesia",
@@ -15575,7 +15575,7 @@
     },
     {
       "No": 24,
-      "IDBrokerSummary": 956954,
+      "IDBrokerSummary": 957043,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "DR",
       "FirmName": "RHB Sekuritas Indonesia",
@@ -15585,7 +15585,7 @@
     },
     {
       "No": 25,
-      "IDBrokerSummary": 956955,
+      "IDBrokerSummary": 957044,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "DU",
       "FirmName": "KAF Sekuritas Indonesia",
@@ -15595,7 +15595,7 @@
     },
     {
       "No": 26,
-      "IDBrokerSummary": 956956,
+      "IDBrokerSummary": 957045,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "DX",
       "FirmName": "Bahana Sekuritas",
@@ -15605,7 +15605,7 @@
     },
     {
       "No": 27,
-      "IDBrokerSummary": 956957,
+      "IDBrokerSummary": 957046,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "EL",
       "FirmName": "Evergreen Sekuritas Indonesia",
@@ -15615,7 +15615,7 @@
     },
     {
       "No": 28,
-      "IDBrokerSummary": 956958,
+      "IDBrokerSummary": 957047,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "EP",
       "FirmName": "MNC Sekuritas",
@@ -15625,7 +15625,7 @@
     },
     {
       "No": 29,
-      "IDBrokerSummary": 956959,
+      "IDBrokerSummary": 957048,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "ES",
       "FirmName": "EKOKAPITAL SEKURITAS",
@@ -15635,7 +15635,7 @@
     },
     {
       "No": 30,
-      "IDBrokerSummary": 956960,
+      "IDBrokerSummary": 957049,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "FO",
       "FirmName": "Forte Global Sekuritas",
@@ -15645,7 +15645,7 @@
     },
     {
       "No": 31,
-      "IDBrokerSummary": 956961,
+      "IDBrokerSummary": 957050,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "FS",
       "FirmName": "Yuanta Sekuritas Indonesia",
@@ -15655,7 +15655,7 @@
     },
     {
       "No": 32,
-      "IDBrokerSummary": 956962,
+      "IDBrokerSummary": 957051,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "FZ",
       "FirmName": "Waterfront Sekuritas Indonesia",
@@ -15665,7 +15665,7 @@
     },
     {
       "No": 33,
-      "IDBrokerSummary": 956963,
+      "IDBrokerSummary": 957052,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "GA",
       "FirmName": "BNC Sekuritas Indonesia",
@@ -15675,7 +15675,7 @@
     },
     {
       "No": 34,
-      "IDBrokerSummary": 956964,
+      "IDBrokerSummary": 957053,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "GI",
       "FirmName": "Webull Sekuritas Indonesia",
@@ -15685,7 +15685,7 @@
     },
     {
       "No": 35,
-      "IDBrokerSummary": 956965,
+      "IDBrokerSummary": 957054,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "GR",
       "FirmName": "PANIN SEKURITAS Tbk.",
@@ -15695,7 +15695,7 @@
     },
     {
       "No": 36,
-      "IDBrokerSummary": 956966,
+      "IDBrokerSummary": 957055,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "HD",
       "FirmName": "KGI Sekuritas Indonesia",
@@ -15705,7 +15705,7 @@
     },
     {
       "No": 37,
-      "IDBrokerSummary": 956967,
+      "IDBrokerSummary": 957056,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "HP",
       "FirmName": "Henan Putihrai Sekuritas",
@@ -15715,7 +15715,7 @@
     },
     {
       "No": 38,
-      "IDBrokerSummary": 956968,
+      "IDBrokerSummary": 957057,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "IC",
       "FirmName": "Integrity Capital Sekuritas",
@@ -15725,7 +15725,7 @@
     },
     {
       "No": 39,
-      "IDBrokerSummary": 956969,
+      "IDBrokerSummary": 957058,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "ID",
       "FirmName": "Anugerah Sekuritas Indonesia",
@@ -15735,7 +15735,7 @@
     },
     {
       "No": 40,
-      "IDBrokerSummary": 956970,
+      "IDBrokerSummary": 957059,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "IF",
       "FirmName": "SAMUEL SEKURITAS INDONESIA",
@@ -15745,7 +15745,7 @@
     },
     {
       "No": 41,
-      "IDBrokerSummary": 956971,
+      "IDBrokerSummary": 957060,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "IH",
       "FirmName": "Indo Harvest Sekuritas",
@@ -15755,7 +15755,7 @@
     },
     {
       "No": 42,
-      "IDBrokerSummary": 956972,
+      "IDBrokerSummary": 957061,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "II",
       "FirmName": "Danatama Makmur Sekuritas",
@@ -15765,7 +15765,7 @@
     },
     {
       "No": 43,
-      "IDBrokerSummary": 956973,
+      "IDBrokerSummary": 957062,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "IN",
       "FirmName": "INVESTINDO NUSANTARA SEKURITA",
@@ -15775,7 +15775,7 @@
     },
     {
       "No": 44,
-      "IDBrokerSummary": 956974,
+      "IDBrokerSummary": 957063,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "IT",
       "FirmName": "INTI TELADAN SEKURITAS",
@@ -15785,7 +15785,7 @@
     },
     {
       "No": 45,
-      "IDBrokerSummary": 956975,
+      "IDBrokerSummary": 957064,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "IU",
       "FirmName": "Indo Capital Sekuritas",
@@ -15795,7 +15795,7 @@
     },
     {
       "No": 46,
-      "IDBrokerSummary": 956977,
+      "IDBrokerSummary": 957066,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "KI",
       "FirmName": "Ciptadana Sekuritas Asia",
@@ -15805,7 +15805,7 @@
     },
     {
       "No": 47,
-      "IDBrokerSummary": 956978,
+      "IDBrokerSummary": 957067,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "KK",
       "FirmName": "Phillip Sekuritas Indonesia",
@@ -15815,7 +15815,7 @@
     },
     {
       "No": 48,
-      "IDBrokerSummary": 956979,
+      "IDBrokerSummary": 957068,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "KZ",
       "FirmName": "CLSA Sekuritas Indonesia",
@@ -15825,7 +15825,7 @@
     },
     {
       "No": 49,
-      "IDBrokerSummary": 956980,
+      "IDBrokerSummary": 957069,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "LG",
       "FirmName": "Trimegah Sekuritas Indonesia Tbk.",
@@ -15835,7 +15835,7 @@
     },
     {
       "No": 50,
-      "IDBrokerSummary": 956981,
+      "IDBrokerSummary": 957070,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "LS",
       "FirmName": "Reliance Sekuritas Indonesia Tbk.",
@@ -15845,7 +15845,7 @@
     },
     {
       "No": 51,
-      "IDBrokerSummary": 956982,
+      "IDBrokerSummary": 957071,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "MG",
       "FirmName": "Semesta Indovest Sekuritas",
@@ -15855,7 +15855,7 @@
     },
     {
       "No": 52,
-      "IDBrokerSummary": 956983,
+      "IDBrokerSummary": 957072,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "MI",
       "FirmName": "Victoria Sekuritas Indonesia",
@@ -15865,7 +15865,7 @@
     },
     {
       "No": 53,
-      "IDBrokerSummary": 956984,
+      "IDBrokerSummary": 957073,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "MU",
       "FirmName": "Minna Padi Investama Sekuritas",
@@ -15875,7 +15875,7 @@
     },
     {
       "No": 54,
-      "IDBrokerSummary": 956985,
+      "IDBrokerSummary": 957074,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "NI",
       "FirmName": "BNI Sekuritas",
@@ -15885,7 +15885,7 @@
     },
     {
       "No": 55,
-      "IDBrokerSummary": 956986,
+      "IDBrokerSummary": 957075,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "OD",
       "FirmName": "BRI Danareksa Sekuritas",
@@ -15895,7 +15895,7 @@
     },
     {
       "No": 56,
-      "IDBrokerSummary": 956987,
+      "IDBrokerSummary": 957076,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "OK",
       "FirmName": "NET SEKURITAS",
@@ -15905,7 +15905,7 @@
     },
     {
       "No": 57,
-      "IDBrokerSummary": 956988,
+      "IDBrokerSummary": 957077,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "PC",
       "FirmName": "FAC Sekuritas Indonesia",
@@ -15915,7 +15915,7 @@
     },
     {
       "No": 58,
-      "IDBrokerSummary": 956989,
+      "IDBrokerSummary": 957078,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "PD",
       "FirmName": "Indo Premier Sekuritas",
@@ -15925,7 +15925,7 @@
     },
     {
       "No": 59,
-      "IDBrokerSummary": 956990,
+      "IDBrokerSummary": 957079,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "PF",
       "FirmName": "Danasakti Sekuritas Indonesia",
@@ -15935,7 +15935,7 @@
     },
     {
       "No": 60,
-      "IDBrokerSummary": 956991,
+      "IDBrokerSummary": 957080,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "PG",
       "FirmName": "Panca Global Sekuritas",
@@ -15945,7 +15945,7 @@
     },
     {
       "No": 61,
-      "IDBrokerSummary": 956992,
+      "IDBrokerSummary": 957081,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "PI",
       "FirmName": "Magenta Kapital Sekuritas Indonesia",
@@ -15955,7 +15955,7 @@
     },
     {
       "No": 62,
-      "IDBrokerSummary": 956993,
+      "IDBrokerSummary": 957082,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "PO",
       "FirmName": "Pilarmas Investindo Sekuritas",
@@ -15965,7 +15965,7 @@
     },
     {
       "No": 63,
-      "IDBrokerSummary": 956994,
+      "IDBrokerSummary": 957083,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "PP",
       "FirmName": "Aldiracita Sekuritas Indonesia",
@@ -15975,7 +15975,7 @@
     },
     {
       "No": 64,
-      "IDBrokerSummary": 956995,
+      "IDBrokerSummary": 957084,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "QA",
       "FirmName": "Tuntun Sekuritas Indonesia",
@@ -15985,7 +15985,7 @@
     },
     {
       "No": 65,
-      "IDBrokerSummary": 956996,
+      "IDBrokerSummary": 957085,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "RB",
       "FirmName": "Ina Sekuritas Indonesia",
@@ -15995,7 +15995,7 @@
     },
     {
       "No": 66,
-      "IDBrokerSummary": 956997,
+      "IDBrokerSummary": 957086,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "RF",
       "FirmName": "Buana Capital Sekuritas",
@@ -16005,7 +16005,7 @@
     },
     {
       "No": 67,
-      "IDBrokerSummary": 956998,
+      "IDBrokerSummary": 957087,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "RG",
       "FirmName": "Profindo Sekuritas Indonesia",
@@ -16015,7 +16015,7 @@
     },
     {
       "No": 68,
-      "IDBrokerSummary": 956999,
+      "IDBrokerSummary": 957088,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "RO",
       "FirmName": "Pluang Maju Sekuritas",
@@ -16025,7 +16025,7 @@
     },
     {
       "No": 69,
-      "IDBrokerSummary": 957000,
+      "IDBrokerSummary": 957089,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "RS",
       "FirmName": "Yulie Sekuritas Indonesia Tbk.",
@@ -16035,7 +16035,7 @@
     },
     {
       "No": 70,
-      "IDBrokerSummary": 957001,
+      "IDBrokerSummary": 957090,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "RX",
       "FirmName": "Macquarie Sekuritas Indonesia",
@@ -16045,7 +16045,7 @@
     },
     {
       "No": 71,
-      "IDBrokerSummary": 957002,
+      "IDBrokerSummary": 957091,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "SA",
       "FirmName": "Elit Sukses Sekuritas",
@@ -16055,7 +16055,7 @@
     },
     {
       "No": 72,
-      "IDBrokerSummary": 957003,
+      "IDBrokerSummary": 957092,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "SF",
       "FirmName": "Surya Fajar Sekuritas",
@@ -16065,7 +16065,7 @@
     },
     {
       "No": 73,
-      "IDBrokerSummary": 957004,
+      "IDBrokerSummary": 957093,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "SH",
       "FirmName": "Artha Sekuritas Indonesia",
@@ -16075,7 +16075,7 @@
     },
     {
       "No": 74,
-      "IDBrokerSummary": 957005,
+      "IDBrokerSummary": 957094,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "SQ",
       "FirmName": "BCA Sekuritas",
@@ -16085,7 +16085,7 @@
     },
     {
       "No": 75,
-      "IDBrokerSummary": 957006,
+      "IDBrokerSummary": 957095,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "SS",
       "FirmName": "Supra Sekuritas Indonesia",
@@ -16095,7 +16095,7 @@
     },
     {
       "No": 76,
-      "IDBrokerSummary": 957007,
+      "IDBrokerSummary": 957096,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "TF",
       "FirmName": "Laba Sekuritas Indonesia",
@@ -16105,7 +16105,7 @@
     },
     {
       "No": 77,
-      "IDBrokerSummary": 957008,
+      "IDBrokerSummary": 957097,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "TP",
       "FirmName": "OCBC Sekuritas Indonesia",
@@ -16115,7 +16115,7 @@
     },
     {
       "No": 78,
-      "IDBrokerSummary": 957009,
+      "IDBrokerSummary": 957098,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "TS",
       "FirmName": "Dwidana Sakti Sekuritas",
@@ -16125,7 +16125,7 @@
     },
     {
       "No": 79,
-      "IDBrokerSummary": 957010,
+      "IDBrokerSummary": 957099,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "XA",
       "FirmName": "NH Korindo Sekuritas Indonesia",
@@ -16135,7 +16135,7 @@
     },
     {
       "No": 80,
-      "IDBrokerSummary": 957011,
+      "IDBrokerSummary": 957100,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "XC",
       "FirmName": "Ajaib Sekuritas Asia",
@@ -16145,7 +16145,7 @@
     },
     {
       "No": 81,
-      "IDBrokerSummary": 957012,
+      "IDBrokerSummary": 957101,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "XL",
       "FirmName": "Stockbit Sekuritas Digital",
@@ -16155,7 +16155,7 @@
     },
     {
       "No": 82,
-      "IDBrokerSummary": 957013,
+      "IDBrokerSummary": 957102,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "YB",
       "FirmName": "Yakin Bertumbuh Sekuritas",
@@ -16165,7 +16165,7 @@
     },
     {
       "No": 83,
-      "IDBrokerSummary": 957014,
+      "IDBrokerSummary": 957103,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "YJ",
       "FirmName": "Lotus Andalan Sekuritas",
@@ -16175,7 +16175,7 @@
     },
     {
       "No": 84,
-      "IDBrokerSummary": 957015,
+      "IDBrokerSummary": 957104,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "YO",
       "FirmName": "Amantara Sekuritas Indonesia",
@@ -16185,7 +16185,7 @@
     },
     {
       "No": 85,
-      "IDBrokerSummary": 957016,
+      "IDBrokerSummary": 957105,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "YP",
       "FirmName": "Mirae Asset Sekuritas Indonesia",
@@ -16195,7 +16195,7 @@
     },
     {
       "No": 86,
-      "IDBrokerSummary": 957017,
+      "IDBrokerSummary": 957106,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "YU",
       "FirmName": "CGS International Sekuritas Indonesia",
@@ -16205,7 +16205,7 @@
     },
     {
       "No": 87,
-      "IDBrokerSummary": 957018,
+      "IDBrokerSummary": 957107,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "ZP",
       "FirmName": "Maybank Sekuritas Indonesia",
@@ -16215,7 +16215,7 @@
     },
     {
       "No": 88,
-      "IDBrokerSummary": 957019,
+      "IDBrokerSummary": 957108,
       "Date": "2026-06-09T00:00:00",
       "IDFirm": "ZR",
       "FirmName": "Bumiputera Sekuritas",
