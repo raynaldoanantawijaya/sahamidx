@@ -1,10 +1,10 @@
 {
   "metadata": {
     "scraper_name": "IDX Native Browser API Scraper",
-    "timestamp": 1782096027,
-    "scrape_date": "2026-06-22T09:40:27.187160",
+    "timestamp": 1782121107,
+    "scrape_date": "2026-06-22T16:38:27.605608",
     "total_stocks": 959,
-    "total_brokers": 0
+    "total_brokers": 88
   },
   "stocks": {
     "AALI": {
@@ -15342,5 +15342,886 @@
       "Frekuensi": 0
     }
   },
-  "brokers": []
+  "brokers": [
+    {
+      "No": 1,
+      "IDBrokerSummary": 957643,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "AD",
+      "FirmName": "Sukadana Prima Sekuritas",
+      "Volume": 60956500,
+      "Value": 6856230500,
+      "Frequency": 388
+    },
+    {
+      "No": 2,
+      "IDBrokerSummary": 957644,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "AF",
+      "FirmName": "Harita Kencana Sekuritas",
+      "Volume": 1622900,
+      "Value": 1262155900,
+      "Frequency": 90
+    },
+    {
+      "No": 3,
+      "IDBrokerSummary": 957645,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "AG",
+      "FirmName": "Kiwoom Sekuritas Indonesia",
+      "Volume": 148781600,
+      "Value": 192290520400,
+      "Frequency": 14349
+    },
+    {
+      "No": 4,
+      "IDBrokerSummary": 957646,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "AH",
+      "FirmName": "Shinhan Sekuritas Indonesia",
+      "Volume": 1034000,
+      "Value": 257155300,
+      "Frequency": 20
+    },
+    {
+      "No": 5,
+      "IDBrokerSummary": 957647,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "AI",
+      "FirmName": "Kay Hian Sekuritas",
+      "Volume": 402986800,
+      "Value": 356821168800,
+      "Frequency": 12245
+    },
+    {
+      "No": 6,
+      "IDBrokerSummary": 957648,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "AK",
+      "FirmName": "UBS Sekuritas Indonesia",
+      "Volume": 8350296670,
+      "Value": 11470507334274,
+      "Frequency": 282970
+    },
+    {
+      "No": 7,
+      "IDBrokerSummary": 957649,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "AO",
+      "FirmName": "ERDIKHA ELIT SEKURITAS",
+      "Volume": 266231300,
+      "Value": 202042923500,
+      "Frequency": 25545
+    },
+    {
+      "No": 8,
+      "IDBrokerSummary": 957650,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "AP",
+      "FirmName": "Pacific Sekuritas Indonesia",
+      "Volume": 36828210,
+      "Value": 30715994540,
+      "Frequency": 25
+    },
+    {
+      "No": 9,
+      "IDBrokerSummary": 957651,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "AR",
+      "FirmName": "Binaartha Sekuritas",
+      "Volume": 26271700,
+      "Value": 9224709900,
+      "Frequency": 1307
+    },
+    {
+      "No": 10,
+      "IDBrokerSummary": 957652,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "AT",
+      "FirmName": "Phintraco Sekuritas",
+      "Volume": 164582394,
+      "Value": 121797775700,
+      "Frequency": 12711
+    },
+    {
+      "No": 11,
+      "IDBrokerSummary": 957653,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "AZ",
+      "FirmName": "Sucor Sekuritas",
+      "Volume": 1341071300,
+      "Value": 635407008300,
+      "Frequency": 44194
+    },
+    {
+      "No": 12,
+      "IDBrokerSummary": 957654,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "BB",
+      "FirmName": "Verdhana Sekuritas Indonesia",
+      "Volume": 373218898,
+      "Value": 533054867980,
+      "Frequency": 19725
+    },
+    {
+      "No": 13,
+      "IDBrokerSummary": 957655,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "BF",
+      "FirmName": "Inti Fikasa Sekuritas",
+      "Volume": 2284500,
+      "Value": 4210745000,
+      "Frequency": 53
+    },
+    {
+      "No": 14,
+      "IDBrokerSummary": 957656,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "BK",
+      "FirmName": "J.P. Morgan Sekuritas Indonesia",
+      "Volume": 1838069562,
+      "Value": 3345021755860,
+      "Frequency": 67003
+    },
+    {
+      "No": 15,
+      "IDBrokerSummary": 957657,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "BQ",
+      "FirmName": "Korea Investment and Sekuritas Indonesia",
+      "Volume": 934646000,
+      "Value": 279285796500,
+      "Frequency": 50997
+    },
+    {
+      "No": 16,
+      "IDBrokerSummary": 957658,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "BR",
+      "FirmName": "Trust Sekuritas",
+      "Volume": 307135500,
+      "Value": 94053915100,
+      "Frequency": 12078
+    },
+    {
+      "No": 17,
+      "IDBrokerSummary": 957659,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "BS",
+      "FirmName": "Equity Sekuritas Indonesia",
+      "Volume": 8765600,
+      "Value": 11814231300,
+      "Frequency": 478
+    },
+    {
+      "No": 18,
+      "IDBrokerSummary": 957660,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "CC",
+      "FirmName": "MANDIRI SEKURITAS",
+      "Volume": 5542853994,
+      "Value": 5627866788298,
+      "Frequency": 325175
+    },
+    {
+      "No": 19,
+      "IDBrokerSummary": 957661,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "CD",
+      "FirmName": "Mega Capital Sekuritas",
+      "Volume": 74554900,
+      "Value": 93813990700,
+      "Frequency": 3939
+    },
+    {
+      "No": 20,
+      "IDBrokerSummary": 957662,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "CP",
+      "FirmName": "KB Valbury Sekuritas",
+      "Volume": 2548675484,
+      "Value": 1111587525880,
+      "Frequency": 102305
+    },
+    {
+      "No": 21,
+      "IDBrokerSummary": 957663,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "DD",
+      "FirmName": "Makindo Sekuritas",
+      "Volume": 188100,
+      "Value": 176516000,
+      "Frequency": 38
+    },
+    {
+      "No": 22,
+      "IDBrokerSummary": 957664,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "DH",
+      "FirmName": "SINARMAS SEKURITAS",
+      "Volume": 189444840,
+      "Value": 454451298320,
+      "Frequency": 14910
+    },
+    {
+      "No": 23,
+      "IDBrokerSummary": 957665,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "DP",
+      "FirmName": "DBS Vickers Sekuritas Indonesia",
+      "Volume": 124618500,
+      "Value": 98445779300,
+      "Frequency": 4319
+    },
+    {
+      "No": 24,
+      "IDBrokerSummary": 957666,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "DR",
+      "FirmName": "RHB Sekuritas Indonesia",
+      "Volume": 446234700,
+      "Value": 280019917500,
+      "Frequency": 24411
+    },
+    {
+      "No": 25,
+      "IDBrokerSummary": 957667,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "DU",
+      "FirmName": "KAF Sekuritas Indonesia",
+      "Volume": 88006500,
+      "Value": 9258521600,
+      "Frequency": 2112
+    },
+    {
+      "No": 26,
+      "IDBrokerSummary": 957668,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "DX",
+      "FirmName": "Bahana Sekuritas",
+      "Volume": 59218100,
+      "Value": 148432173700,
+      "Frequency": 6256
+    },
+    {
+      "No": 27,
+      "IDBrokerSummary": 957669,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "EL",
+      "FirmName": "Evergreen Sekuritas Indonesia",
+      "Volume": 24029400,
+      "Value": 17582451600,
+      "Frequency": 1515
+    },
+    {
+      "No": 28,
+      "IDBrokerSummary": 957670,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "EP",
+      "FirmName": "MNC Sekuritas",
+      "Volume": 594422900,
+      "Value": 215438199700,
+      "Frequency": 35330
+    },
+    {
+      "No": 29,
+      "IDBrokerSummary": 957671,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "ES",
+      "FirmName": "EKOKAPITAL SEKURITAS",
+      "Volume": 9088300,
+      "Value": 12905736000,
+      "Frequency": 886
+    },
+    {
+      "No": 30,
+      "IDBrokerSummary": 957672,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "FO",
+      "FirmName": "Forte Global Sekuritas",
+      "Volume": 51000,
+      "Value": 28960000,
+      "Frequency": 8
+    },
+    {
+      "No": 31,
+      "IDBrokerSummary": 957673,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "FS",
+      "FirmName": "Yuanta Sekuritas Indonesia",
+      "Volume": 75223700,
+      "Value": 33198995500,
+      "Frequency": 2215
+    },
+    {
+      "No": 32,
+      "IDBrokerSummary": 957674,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "FZ",
+      "FirmName": "Waterfront Sekuritas Indonesia",
+      "Volume": 147598800,
+      "Value": 53236374900,
+      "Frequency": 4375
+    },
+    {
+      "No": 33,
+      "IDBrokerSummary": 957675,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "GA",
+      "FirmName": "BNC Sekuritas Indonesia",
+      "Volume": 23847000,
+      "Value": 11467232600,
+      "Frequency": 639
+    },
+    {
+      "No": 34,
+      "IDBrokerSummary": 957676,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "GI",
+      "FirmName": "Webull Sekuritas Indonesia",
+      "Volume": 7661100,
+      "Value": 5051809800,
+      "Frequency": 817
+    },
+    {
+      "No": 35,
+      "IDBrokerSummary": 957677,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "GR",
+      "FirmName": "PANIN SEKURITAS Tbk.",
+      "Volume": 509806900,
+      "Value": 368665748200,
+      "Frequency": 31086
+    },
+    {
+      "No": 36,
+      "IDBrokerSummary": 957678,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "HD",
+      "FirmName": "KGI Sekuritas Indonesia",
+      "Volume": 663780200,
+      "Value": 370435963700,
+      "Frequency": 32822
+    },
+    {
+      "No": 37,
+      "IDBrokerSummary": 957679,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "HP",
+      "FirmName": "Henan Putihrai Sekuritas",
+      "Volume": 132663900,
+      "Value": 120910736000,
+      "Frequency": 10568
+    },
+    {
+      "No": 38,
+      "IDBrokerSummary": 957680,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "IC",
+      "FirmName": "Integrity Capital Sekuritas",
+      "Volume": 1845500,
+      "Value": 606296000,
+      "Frequency": 35
+    },
+    {
+      "No": 39,
+      "IDBrokerSummary": 957681,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "ID",
+      "FirmName": "Anugerah Sekuritas Indonesia",
+      "Volume": 22069000,
+      "Value": 13203251400,
+      "Frequency": 1769
+    },
+    {
+      "No": 40,
+      "IDBrokerSummary": 957682,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "IF",
+      "FirmName": "SAMUEL SEKURITAS INDONESIA",
+      "Volume": 218816500,
+      "Value": 167045122900,
+      "Frequency": 8970
+    },
+    {
+      "No": 41,
+      "IDBrokerSummary": 957683,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "IH",
+      "FirmName": "Indo Harvest Sekuritas",
+      "Volume": 53462800,
+      "Value": 22356019100,
+      "Frequency": 3572
+    },
+    {
+      "No": 42,
+      "IDBrokerSummary": 957684,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "II",
+      "FirmName": "Danatama Makmur Sekuritas",
+      "Volume": 1057152800,
+      "Value": 138008630500,
+      "Frequency": 286
+    },
+    {
+      "No": 43,
+      "IDBrokerSummary": 957685,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "IN",
+      "FirmName": "INVESTINDO NUSANTARA SEKURITA",
+      "Volume": 81624800,
+      "Value": 68938578000,
+      "Frequency": 3255
+    },
+    {
+      "No": 44,
+      "IDBrokerSummary": 957686,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "IT",
+      "FirmName": "INTI TELADAN SEKURITAS",
+      "Volume": 829100,
+      "Value": 861260800,
+      "Frequency": 60
+    },
+    {
+      "No": 45,
+      "IDBrokerSummary": 957687,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "IU",
+      "FirmName": "Indo Capital Sekuritas",
+      "Volume": 102183400,
+      "Value": 21161028100,
+      "Frequency": 3235
+    },
+    {
+      "No": 46,
+      "IDBrokerSummary": 957689,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "KI",
+      "FirmName": "Ciptadana Sekuritas Asia",
+      "Volume": 293075600,
+      "Value": 186136121800,
+      "Frequency": 12009
+    },
+    {
+      "No": 47,
+      "IDBrokerSummary": 957690,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "KK",
+      "FirmName": "Phillip Sekuritas Indonesia",
+      "Volume": 663613600,
+      "Value": 358607139100,
+      "Frequency": 52185
+    },
+    {
+      "No": 48,
+      "IDBrokerSummary": 957691,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "KZ",
+      "FirmName": "CLSA Sekuritas Indonesia",
+      "Volume": 1236148600,
+      "Value": 995830773000,
+      "Frequency": 28547
+    },
+    {
+      "No": 49,
+      "IDBrokerSummary": 957692,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "LG",
+      "FirmName": "Trimegah Sekuritas Indonesia Tbk.",
+      "Volume": 756694000,
+      "Value": 650408100300,
+      "Frequency": 38196
+    },
+    {
+      "No": 50,
+      "IDBrokerSummary": 957693,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "LS",
+      "FirmName": "Reliance Sekuritas Indonesia Tbk.",
+      "Volume": 149710200,
+      "Value": 31753499100,
+      "Frequency": 2848
+    },
+    {
+      "No": 51,
+      "IDBrokerSummary": 957694,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "MG",
+      "FirmName": "Semesta Indovest Sekuritas",
+      "Volume": 3511502900,
+      "Value": 1582148017000,
+      "Frequency": 81387
+    },
+    {
+      "No": 52,
+      "IDBrokerSummary": 957695,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "MI",
+      "FirmName": "Victoria Sekuritas Indonesia",
+      "Volume": 22183200,
+      "Value": 9713142700,
+      "Frequency": 831
+    },
+    {
+      "No": 53,
+      "IDBrokerSummary": 957696,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "MU",
+      "FirmName": "Minna Padi Investama Sekuritas",
+      "Volume": 118546300,
+      "Value": 8801890900,
+      "Frequency": 1543
+    },
+    {
+      "No": 54,
+      "IDBrokerSummary": 957697,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "NI",
+      "FirmName": "BNI Sekuritas",
+      "Volume": 619249700,
+      "Value": 479177133200,
+      "Frequency": 57352
+    },
+    {
+      "No": 55,
+      "IDBrokerSummary": 957698,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "OD",
+      "FirmName": "BRI Danareksa Sekuritas",
+      "Volume": 682516900,
+      "Value": 354838157900,
+      "Frequency": 53817
+    },
+    {
+      "No": 56,
+      "IDBrokerSummary": 957699,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "OK",
+      "FirmName": "NET SEKURITAS",
+      "Volume": 14986400,
+      "Value": 26660244400,
+      "Frequency": 1209
+    },
+    {
+      "No": 57,
+      "IDBrokerSummary": 957700,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "PC",
+      "FirmName": "FAC Sekuritas Indonesia",
+      "Volume": 64250900,
+      "Value": 33804478600,
+      "Frequency": 4878
+    },
+    {
+      "No": 58,
+      "IDBrokerSummary": 957701,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "PD",
+      "FirmName": "Indo Premier Sekuritas",
+      "Volume": 1389450120,
+      "Value": 1113613282000,
+      "Frequency": 141482
+    },
+    {
+      "No": 59,
+      "IDBrokerSummary": 957702,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "PF",
+      "FirmName": "Danasakti Sekuritas Indonesia",
+      "Volume": 7634400,
+      "Value": 9110457000,
+      "Frequency": 574
+    },
+    {
+      "No": 60,
+      "IDBrokerSummary": 957703,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "PG",
+      "FirmName": "Panca Global Sekuritas",
+      "Volume": 21570500,
+      "Value": 17758940600,
+      "Frequency": 1097
+    },
+    {
+      "No": 61,
+      "IDBrokerSummary": 957704,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "PI",
+      "FirmName": "Magenta Kapital Sekuritas Indonesia",
+      "Volume": 34302500,
+      "Value": 6311444800,
+      "Frequency": 905
+    },
+    {
+      "No": 62,
+      "IDBrokerSummary": 957705,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "PO",
+      "FirmName": "Pilarmas Investindo Sekuritas",
+      "Volume": 59318400,
+      "Value": 52851415300,
+      "Frequency": 1489
+    },
+    {
+      "No": 63,
+      "IDBrokerSummary": 957706,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "PP",
+      "FirmName": "Aldiracita Sekuritas Indonesia",
+      "Volume": 887000,
+      "Value": 2101555400,
+      "Frequency": 97
+    },
+    {
+      "No": 64,
+      "IDBrokerSummary": 957707,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "QA",
+      "FirmName": "Tuntun Sekuritas Indonesia",
+      "Volume": 61879200,
+      "Value": 8760726400,
+      "Frequency": 2757
+    },
+    {
+      "No": 65,
+      "IDBrokerSummary": 957708,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "RB",
+      "FirmName": "Ina Sekuritas Indonesia",
+      "Volume": 49910880,
+      "Value": 11564288700,
+      "Frequency": 1321
+    },
+    {
+      "No": 66,
+      "IDBrokerSummary": 957709,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "RF",
+      "FirmName": "Buana Capital Sekuritas",
+      "Volume": 388957600,
+      "Value": 475839844500,
+      "Frequency": 6695
+    },
+    {
+      "No": 67,
+      "IDBrokerSummary": 957710,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "RG",
+      "FirmName": "Profindo Sekuritas Indonesia",
+      "Volume": 21972200,
+      "Value": 13568265800,
+      "Frequency": 1074
+    },
+    {
+      "No": 68,
+      "IDBrokerSummary": 957711,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "RO",
+      "FirmName": "Pluang Maju Sekuritas",
+      "Volume": 82334100,
+      "Value": 37840242400,
+      "Frequency": 7548
+    },
+    {
+      "No": 69,
+      "IDBrokerSummary": 957712,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "RS",
+      "FirmName": "Yulie Sekuritas Indonesia Tbk.",
+      "Volume": 4573600,
+      "Value": 4246055500,
+      "Frequency": 310
+    },
+    {
+      "No": 70,
+      "IDBrokerSummary": 957713,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "RX",
+      "FirmName": "Macquarie Sekuritas Indonesia",
+      "Volume": 1056786250,
+      "Value": 974110125950,
+      "Frequency": 10435
+    },
+    {
+      "No": 71,
+      "IDBrokerSummary": 957714,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "SA",
+      "FirmName": "Elit Sukses Sekuritas",
+      "Volume": 53602400,
+      "Value": 12634511700,
+      "Frequency": 4048
+    },
+    {
+      "No": 72,
+      "IDBrokerSummary": 957715,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "SF",
+      "FirmName": "Surya Fajar Sekuritas",
+      "Volume": 1488684100,
+      "Value": 36911927600,
+      "Frequency": 872
+    },
+    {
+      "No": 73,
+      "IDBrokerSummary": 957716,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "SH",
+      "FirmName": "Artha Sekuritas Indonesia",
+      "Volume": 89059900,
+      "Value": 40860923700,
+      "Frequency": 3227
+    },
+    {
+      "No": 74,
+      "IDBrokerSummary": 957717,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "SQ",
+      "FirmName": "BCA Sekuritas",
+      "Volume": 832266314,
+      "Value": 939412813050,
+      "Frequency": 53233
+    },
+    {
+      "No": 75,
+      "IDBrokerSummary": 957718,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "SS",
+      "FirmName": "Supra Sekuritas Indonesia",
+      "Volume": 512625200,
+      "Value": 374191282200,
+      "Frequency": 10703
+    },
+    {
+      "No": 76,
+      "IDBrokerSummary": 957719,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "TF",
+      "FirmName": "Laba Sekuritas Indonesia",
+      "Volume": 8943500,
+      "Value": 3241435900,
+      "Frequency": 393
+    },
+    {
+      "No": 77,
+      "IDBrokerSummary": 957720,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "TP",
+      "FirmName": "OCBC Sekuritas Indonesia",
+      "Volume": 415458600,
+      "Value": 475557253100,
+      "Frequency": 20338
+    },
+    {
+      "No": 78,
+      "IDBrokerSummary": 957721,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "TS",
+      "FirmName": "Dwidana Sakti Sekuritas",
+      "Volume": 29555300,
+      "Value": 17105953000,
+      "Frequency": 3802
+    },
+    {
+      "No": 79,
+      "IDBrokerSummary": 957722,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "XA",
+      "FirmName": "NH Korindo Sekuritas Indonesia",
+      "Volume": 553424600,
+      "Value": 199745116900,
+      "Frequency": 22335
+    },
+    {
+      "No": 80,
+      "IDBrokerSummary": 957723,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "XC",
+      "FirmName": "Ajaib Sekuritas Asia",
+      "Volume": 1377916700,
+      "Value": 897992025700,
+      "Frequency": 192969
+    },
+    {
+      "No": 81,
+      "IDBrokerSummary": 957724,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "XL",
+      "FirmName": "Stockbit Sekuritas Digital",
+      "Volume": 8953500464,
+      "Value": 3665412870140,
+      "Frequency": 1031679
+    },
+    {
+      "No": 82,
+      "IDBrokerSummary": 957725,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "YB",
+      "FirmName": "Yakin Bertumbuh Sekuritas",
+      "Volume": 950671300,
+      "Value": 214158147400,
+      "Frequency": 34417
+    },
+    {
+      "No": 83,
+      "IDBrokerSummary": 957726,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "YJ",
+      "FirmName": "Lotus Andalan Sekuritas",
+      "Volume": 233933000,
+      "Value": 129655279700,
+      "Frequency": 12135
+    },
+    {
+      "No": 84,
+      "IDBrokerSummary": 957727,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "YO",
+      "FirmName": "Amantara Sekuritas Indonesia",
+      "Volume": 2240000,
+      "Value": 980400000,
+      "Frequency": 72
+    },
+    {
+      "No": 85,
+      "IDBrokerSummary": 957728,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "YP",
+      "FirmName": "Mirae Asset Sekuritas Indonesia",
+      "Volume": 2740184100,
+      "Value": 1639608794300,
+      "Frequency": 218710
+    },
+    {
+      "No": 86,
+      "IDBrokerSummary": 957729,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "YU",
+      "FirmName": "CGS International Sekuritas Indonesia",
+      "Volume": 2847365574,
+      "Value": 3671182762080,
+      "Frequency": 96754
+    },
+    {
+      "No": 87,
+      "IDBrokerSummary": 957730,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "ZP",
+      "FirmName": "Maybank Sekuritas Indonesia",
+      "Volume": 5406771354,
+      "Value": 6502552314728,
+      "Frequency": 114198
+    },
+    {
+      "No": 88,
+      "IDBrokerSummary": 957731,
+      "Date": "2026-06-19T00:00:00",
+      "IDFirm": "ZR",
+      "FirmName": "Bumiputera Sekuritas",
+      "Volume": 21759200,
+      "Value": 9789623500,
+      "Frequency": 1127
+    }
+  ]
 }
