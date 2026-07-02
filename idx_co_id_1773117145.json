@@ -1,8 +1,8 @@
 {
   "metadata": {
     "scraper_name": "IDX Native Browser API Scraper",
-    "timestamp": 1782940543,
-    "scrape_date": "2026-07-02T04:15:43.645825",
+    "timestamp": 1782957810,
+    "scrape_date": "2026-07-02T09:03:30.018583",
     "total_stocks": 959,
     "total_brokers": 88
   },
@@ -15068,7 +15068,7 @@
       "Nama_Perusahaan": "Pelayaran Jaya Hidup Baru Tbk.",
       "Sektor": "",
       "Papan_Pencatatan": "",
-      "Saham_Beredar": 1920313590,
+      "Saham_Beredar": 1920316548,
       "Tanggal_Pencatatan": "2025-11-06T00:00:00",
       "Harga_Tinggi": 162,
       "Harga_Rendah": 150,
