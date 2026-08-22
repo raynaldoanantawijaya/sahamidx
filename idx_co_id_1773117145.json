@@ -1,8 +1,8 @@
 {
   "metadata": {
     "scraper_name": "IDX Native Browser API Scraper",
-    "timestamp": 1787372532,
-    "scrape_date": "2026-08-22T11:22:12.266521",
+    "timestamp": 1787386700,
+    "scrape_date": "2026-08-22T15:18:20.204799",
     "total_stocks": 963,
     "total_brokers": 88
   },
@@ -2141,7 +2141,7 @@
       "Sektor": "",
       "Papan_Pencatatan": "",
       "Saham_Beredar": 18535695255,
-      "Tanggal_Pencatatan": "2026-04-11T00:00:00",
+      "Tanggal_Pencatatan": "2026-08-22T00:00:00",
       "Harga_Tinggi": 635,
       "Harga_Rendah": 625,
       "Harga_Tutup": 625,
