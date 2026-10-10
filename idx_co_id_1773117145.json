@@ -1,9 +1,9 @@
 {
   "metadata": {
     "scraper_name": "IDX Native Browser API Scraper",
-    "timestamp": 1791601544,
-    "scrape_date": "2026-10-10T10:05:44.078752",
-    "total_stocks": 964,
+    "timestamp": 1791649843,
+    "scrape_date": "2026-10-10T23:30:43.061485",
+    "total_stocks": 963,
     "total_brokers": 88
   },
   "stocks": {
@@ -3942,14 +3942,6 @@
       "Volume": 19397300,
       "Nilai": 3438102400,
       "Frekuensi": 1974
-    },
-    "TEST-SHM": {
-      "Kode": "TEST-SHM",
-      "Nama_Perusahaan": "TEST-SHM",
-      "Sektor": "",
-      "Papan_Pencatatan": "",
-      "Saham_Beredar": 0,
-      "Tanggal_Pencatatan": null
     },
     "AALI": {
       "Kode": "AALI",
